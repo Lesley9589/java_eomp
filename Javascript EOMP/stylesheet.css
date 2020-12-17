@@ -1,0 +1,121 @@
+.gridnav {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+}
+.griditems {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  border-style: solid;
+}
+body {
+  background-color: black;
+}
+.intro {
+  color: white;
+  text-align: left;
+  top: 15px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.top-left {
+  position: absolute;
+  top: 190px;
+  left: 150px;
+
+  position: fixed;
+}
+.slider1 {
+  z-index: -3;
+  position: fixed;
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* IE */
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.start {
+  -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+  -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+  -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+  animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+  background-color: black;
+  margin-top: 20%;
+}
+
+.btn {
+  background-color: black;
+  border-style: solid;
+  border-color: black;
+}
+@media only screen and (max-width: 1200px) {
+  .slider1 {
+    z-index: -3;
+    position: absolute;
+    right: 200px;
+    margin-right: 0%;
+  }
+  .top-left {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+  }
+  body {
+    background-color: black;
+  }
+  .start {
+    z-index: -3;
+    position: fixed;
+    left: 230px;
+    top: 310px;
+    width: 40%;
+  }
+}
